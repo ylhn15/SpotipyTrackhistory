@@ -1,6 +1,16 @@
 # SpotipyTracklist
 Create a tracklist from played tracks on Spotify with Spotipy.
 
+Credentials are stored in credentials.json with the following format:
+````
+{
+    "username" : "username",
+    "client_id" : "client_id",
+    "client_secret" : "client_secret",
+    "redirect_url" : "httpsredirect_urlwww.google.de"
+}
+````
+
 Tracks are saved into a JSON File in the following format:
 ````
 [

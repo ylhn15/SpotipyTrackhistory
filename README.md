@@ -7,7 +7,7 @@ Credentials are stored in credentials.json with the following format:
     "username" : "username",
     "client_id" : "client_id",
     "client_secret" : "client_secret",
-    "redirect_url" : "httpsredirect_url"
+    "redirect_url" : "redirect_url"
 }
 ````
 

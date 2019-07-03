@@ -33,15 +33,15 @@ def get_current_track():
 
         if track_name == name_of_current_track:
             return None
-
         album_name = now_playing['item']['album']['name']
         temp_artists = now_playing['item']['artists']
         played_date = datetime.datetime.now()
         played_date = str(played_date)
+        external_url = now_playing['item']['external_urls']['spotify']
         print(played_date)
         for artist in temp_artists:
             artists.append(artist['name'])
-        track = Track(name=track_name, artists= artists, album=album_name, played_date=played_date)
+        track = Track(name=track_name, artists= artists, album=album_name, played_date=played_date, external_url=external_url)
         track_as_dict = track.get_track_as_dict()
         return track_as_dict
     return None

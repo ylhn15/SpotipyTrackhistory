@@ -38,6 +38,7 @@ Additionally to the backend I started to write different frontend - applications
 [Progressive Web Ap written in Flutter](https://github.com/ylhn15/SpotipyTrackList-Flutter)
  
 ## Next up
-*[] Rewrite backend in Go
-*[] Improve usability of the iOS Application
-*[] Add dummy data for every frontend - application
+- [ ] Rewrite backend in Go
+- [ ] Add search function
+- [ ] Improve usability of the iOS Application
+- [ ] Add dummy data for every frontend - application

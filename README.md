@@ -22,7 +22,8 @@ Tracks are saved into a JSON File in the following format:
       "Artist 1", 
       "Artist 2",
       "..."
-    ]
+    ],
+    "external_url": "open://spotify/path-to-track"
   }
 ]
 ````

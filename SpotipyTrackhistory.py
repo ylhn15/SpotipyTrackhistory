@@ -7,6 +7,7 @@ from Track import Track
 import json
 import datetime
 import CredentialManager
+from firebase import firebase
 
 
 name_of_current_track = ""
@@ -73,11 +74,19 @@ def init_name_of_current_track():
             if len(tracks) > 0:
                 name_of_current_track = tracks[-1]['name']
 
+def post_to_firebase():
+    track_as_dict = get_current_track()
+    fb = firebase.FirebaseApplication('https://spotipytracklist.firebaseio.com/', None)
+    result = fb.post('/tracks', track_as_dict, {'print': 'pretty'}, {'X_FANCY_HEADER': 'VERY FANCY'})
+
 def main():
     init_name_of_current_track()
     while True:
         write_track_to_file()
         time.sleep(5)
+        post_to_firebase()
+
+
 
 if __name__ == "__main__":
     main()
